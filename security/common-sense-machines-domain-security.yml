@@ -1,0 +1,15 @@
+generated: '2026-07-18'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: csm.ai
+  https: false
+domains:
+- domain: csm.ai
+  dnssec: false
+  caa:
+  - 0 issue "pki.goog"
+  - 0 iodef "mailto:eng@csm.ai"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
